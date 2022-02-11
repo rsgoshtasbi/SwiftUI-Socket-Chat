@@ -11,6 +11,7 @@
 		32935FCA27B61EB200E99CDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32935FC927B61EB200E99CDA /* ContentView.swift */; };
 		32935FCC27B61EB200E99CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32935FCB27B61EB200E99CDA /* Assets.xcassets */; };
 		32935FCF27B61EB300E99CDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32935FCE27B61EB200E99CDA /* Preview Assets.xcassets */; };
+		32935FD727B61F4100E99CDA /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 32935FD627B61F4100E99CDA /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		32935FC927B61EB200E99CDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32935FCB27B61EB200E99CDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32935FCE27B61EB200E99CDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		32935FD827B6221F00E99CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32935FD727B61F4100E99CDA /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		32935FC627B61EB200E99CDA /* SocketApp */ = {
 			isa = PBXGroup;
 			children = (
+				32935FD827B6221F00E99CDA /* Info.plist */,
 				32935FC727B61EB200E99CDA /* SocketAppApp.swift */,
 				32935FC927B61EB200E99CDA /* ContentView.swift */,
 				32935FCB27B61EB200E99CDA /* Assets.xcassets */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = SocketApp;
+			packageProductDependencies = (
+				32935FD627B61F4100E99CDA /* SocketIO */,
+			);
 			productName = SocketApp;
 			productReference = 32935FC427B61EB200E99CDA /* SocketApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 32935FBB27B61EB200E99CDA;
+			packageReferences = (
+				32935FD527B61F4100E99CDA /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = 32935FC527B61EB200E99CDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -272,6 +282,7 @@
 				DEVELOPMENT_TEAM = Q2RLWJ2P7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocketApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +312,7 @@
 				DEVELOPMENT_TEAM = Q2RLWJ2P7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocketApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32935FD527B61F4100E99CDA /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32935FD627B61F4100E99CDA /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32935FD527B61F4100E99CDA /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32935FBC27B61EB200E99CDA /* Project object */;
 }
